@@ -2,7 +2,7 @@
 
 apt-get update
 apt-get install -y \
-    vim htop curl wget unzip \
+    vim htop curl unzip \
     build-essential pkg-config \
     libxml2-dev libsqlite3-dev libssl-dev libonig-dev libsystemd-dev
 

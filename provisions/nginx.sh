@@ -3,7 +3,7 @@
 NGINX_VERSION="1.20.1"
 
 cd /tmp
-wget https://nginx.org/keys/nginx_signing.key
+curl -L -O https://nginx.org/keys/nginx_signing.key
 apt-key add nginx_signing.key
 
 echo "deb https://nginx.org/packages/mainline/ubuntu/ focal nginx" | sudo tee -a /etc/apt/sources.list

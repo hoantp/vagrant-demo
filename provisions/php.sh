@@ -3,8 +3,8 @@
 PHP_VERSION="7.4.23"
 
 cd /tmp && rm -rf php-*
-wget https://www.php.net/distributions/php-$PHP_VERSION.tar.gz
-tar xvzf php-$PHP_VERSION.tar.gz
+curl -L -O https://www.php.net/distributions/php-$PHP_VERSION.tar.gz
+tar xzf php-$PHP_VERSION.tar.gz
 
 cd /tmp/php-$PHP_VERSION
 ./configure --enable-fpm --with-fpm-systemd \
@@ -17,3 +17,7 @@ cp sapi/fpm/php-fpm /usr/local/bin
 
 cp /vagrant/config/php/php-fpm.conf /usr/local/etc/php-fpm.conf
 cp /vagrant/config/php/www.conf /usr/local/etc/php-fpm.d/www.conf
+cp /vagrant/config/php/php-fpm.service /lib/systemd/system/php-fpm.service
+
+systemctl start php-fpm
+systemctl enable php-fpm
