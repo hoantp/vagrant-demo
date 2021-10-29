@@ -1,5 +1,7 @@
 #! /bin/bash
 
+echo -en "\n=== PROVISION: Nginx ===\n"
+
 NGINX_VERSION="1.20.1"
 
 cd /tmp

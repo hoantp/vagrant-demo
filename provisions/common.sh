@@ -1,5 +1,8 @@
 #! /bin/bash
 
+echo -en "\n=== PROVISION: Common ===\n"
+echo -en "Run as: $(whoami)\n\n"
+
 apt-get update
 apt-get install -y \
     vim htop curl unzip \
