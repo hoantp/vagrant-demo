@@ -9,10 +9,10 @@ curl -L -O https://www.php.net/distributions/php-$PHP_VERSION.tar.gz
 tar xzf php-$PHP_VERSION.tar.gz
 
 cd /tmp/php-$PHP_VERSION
-./configure --silent \
+./configure -q \
             --enable-fpm --with-fpm-systemd \
             --enable-bcmath --enable-mbstring --with-openssl
-make --silent --jobs=4
+make -s --jobs=4
 make install
 
 cp php.ini-development /usr/local/php/php.ini
