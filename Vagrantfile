@@ -22,4 +22,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "provisions/nginx.sh"
   config.vm.provision "shell", path: "provisions/php.sh"
   config.vm.provision "shell", path: "provisions/mariadb.sh"
+  config.vm.provision "shell", path: "provisions/composer.sh"
 end
